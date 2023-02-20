@@ -1,0 +1,70 @@
+.main__component{
+    position: fixed;
+    top: 32.7rem;
+    border: 0.01rem solid #18181845;
+    width: 100vw;
+    height: 4rem;
+    color: white;
+    background-color: #181818;
+    padding-left: 1.3rem;
+}
+.img__Style{
+    width: 2rem;
+    height: 2rem;
+    padding-right: 0.7rem;
+}
+.footer__Wrapper{
+    display: flex;
+    align-items: center;
+    gap:0.2rem
+}
+
+.artist__Name{
+    color: grey;
+    font-weight: 500;
+}
+.song__Wrapper{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.icon__Color{
+    color: #1db954;
+}
+.playIcon{
+    font-size: 1rem;
+    padding-left: 0.1rem;
+}
+.icons{
+    font-size: 1.5rem;
+}
+.play__Icon{
+    padding: 0px;
+    margin: 0px;
+    border-radius: 50%;
+    border: 0.01rem solid white;
+    height: 2.7rem;
+    width: 2.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+}
+.middle__Part{
+    display: flex;
+    align-items: center;
+    gap:2rem
+}
+.icon__repeat{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.left_Section{
+    display: flex;
+    align-items: center;
+    width: 30rem;
+}

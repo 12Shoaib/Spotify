@@ -1,0 +1,13 @@
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.main__Component{
+    display: flex;
+}
+.middle__section{
+   
+}
+.footer__section{
+    
+}

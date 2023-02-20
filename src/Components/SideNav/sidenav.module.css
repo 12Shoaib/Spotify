@@ -1,0 +1,72 @@
+.main__Component{
+    padding-left: 1rem;
+    width: 15rem;
+    border: 0.1rem solid black;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    background-color: #010203;
+    color: white;
+    position: fixed;
+}
+.heading__logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+    gap:0.5rem;
+    font-weight: 650;
+    
+}
+.spotify__logo{
+    font-size: 2rem;
+    color: white;
+}
+.inside__content{
+    color: grey;
+    font-weight:500;
+    margin-bottom: 3rem;
+}
+.sub__headings:hover{
+    color: white;
+    cursor: pointer;
+    transition: 450ms ease-out;
+   
+}   
+.sub__headings{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom:0.9rem ;
+    color: gray;
+}
+
+.home__Icon{
+    font-size: 1.7rem;
+}
+.icon_outline{
+    padding: 0.1rem 0.3rem;
+    background: rgb(209, 209, 209);
+    color: black;
+}
+.icon_outline:hover{
+    background: white;
+    color:black
+}
+.content__layer2{
+    color: grey;
+    font-weight:600;
+    margin-bottom: 3rem;
+    border-bottom: 0.01rem solid rgba(128, 128, 128, 0.632);
+    width: 13rem;
+}
+.icon_outline2{
+    padding: 0.1rem 0.3rem;
+    background-image: linear-gradient(rgb(68, 68, 230) , rgb(186, 179, 225));
+
+}
+.heartIcon{
+    color: white;
+    font-size: 0.9rem;
+}
