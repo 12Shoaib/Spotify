@@ -1,0 +1,97 @@
+.main__Component{
+margin-left: 16.1rem;
+overflow: auto;
+}
+.upper__Section{
+    width: 100vw;
+    height: 15rem;
+    padding-top: 4rem;
+    padding-left: 3rem;
+    background-color: #7113ed;
+    display: flex;
+    gap: 2rem;
+}
+.middle__Section{
+    width: 100vw;
+    color: white;
+    background-color: #500ca3;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    gap:1.2rem;
+    padding-left: 1.5rem;
+}.bottom__Section{
+    width: 100vw;
+    background-color:#1e0a36;
+    height: 100vh;
+}
+.poster__Img{
+    width: 11rem;
+    height: 11rem;
+}
+.heading{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+.heading2{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-weight: 700;
+    font-size: 5rem;
+
+    
+}.heading3{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-weight: 600;
+    color: rgba(199, 199, 199, 0.806);
+    font-size: 0.9rem;
+    padding: 0.4rem;
+    
+}.heading4{
+    padding: 0px;
+    margin: 0px;
+    color: rgba(255, 255, 255, 0.868);
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding-left: 0.3rem;
+    
+}
+.spotify__Logo{
+    color: #1db954;
+    border: 0.01rem solid black;
+    border-radius: 50%;
+    background: black;
+}
+.play__Icon{
+    padding: 0px;
+    margin: 0px;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1db954;
+    color: black;
+    font-size: 1.2rem;
+}
+.icons{
+    font-size: 1.6rem;
+}
+.icon__Color{
+    color: #1db954;
+    font-size: 1.8rem;
+
+}
+.icon__Color2{
+    color: white;
+    font-size: 1.8rem;
+}

@@ -1,6 +1,8 @@
 import musicplayer from './musicplayer.module.css'
 import SideNav from '../SideNav/SideNav'
 import Footer from '../Footer/Footer'
+import Header from '../Header/Header'
+import Poster from '../Poster/Poster'
 
 const MusicPlayer  = () => {
 
@@ -8,15 +10,13 @@ const MusicPlayer  = () => {
         <div className={musicplayer.musicplayer__Wrapper}>
 
            <div className={musicplayer.main__Component}>
+                <Header />
 
                 <SideNav />
-            <div className={musicplayer.middle__section}> 
-            
-            </div>
-          </div>
+                <Poster />
 
                 <Footer />
-
+        </div>
         </div>
     )
 }

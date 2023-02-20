@@ -1,0 +1,49 @@
+.main__Component{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 2.4rem;
+    gap: 2rem;
+    padding-top: 0.9rem;
+}
+.sub__Heading{
+    border:0.01rem solid rgba(128, 128, 128, 0.669);
+    border-radius: 30px;
+    padding: 0px;
+    margin: 0px;
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: transparent;
+    color: white;
+
+}
+.sub__Heading2{
+    padding: 0px;
+    margin: 0px;
+    border-radius: 30px;
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border:0.01rem solid rgba(128, 128, 128, 0.669);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(27, 25, 25, 0.877);
+    color: white;
+    margin-right: 2rem;
+
+
+}
+.profilIcon__Wrapper{
+    border: 0.01rem solid grey;
+    border-radius: 50%;
+    padding: 0.2rem 0.2rem;
+    margin-right: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+}

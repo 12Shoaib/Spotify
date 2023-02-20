@@ -1,5 +1,5 @@
 import footer from './footer.module.css';
-import {useState} from 'react'
+import {useRecoilState} from 'recoil'
 import {FaHeart} from 'react-icons/fa'
 import {FiHeart} from 'react-icons/fi'
 import {TiArrowShuffle} from 'react-icons/ti'
@@ -12,13 +12,14 @@ import {TbMicrophone2} from 'react-icons/tb'
 import {HiOutlineSpeakerWave} from 'react-icons/hi2'
 import {HiOutlineQueueList} from 'react-icons/hi2'
 import {MdOutlineSpeaker} from 'react-icons/md'
+import {playPauseStatus , isLikeStatus} from '../../Recoil/Recoil'
 
 
 
 
 const Footer = () => {
-    const [like , setLike] = useState(false)
-    const [playPause , setPlayPause]  = useState(false)
+    const [like , setLike] = useRecoilState(isLikeStatus)
+    const [playPause , setPlayPause]  = useRecoilState(playPauseStatus)
 
     const isLike = () => {
         setLike(!like)
@@ -41,12 +42,12 @@ const Footer = () => {
             <TiArrowShuffle className={footer.icons} />
             <AiFillStepBackward className={footer.icons} />
 
-           {playPause ? <p className={footer.play__Icon}>
-               <IoPauseSharp onClick={isPlayPause} className={footer.icons}/>
+           {playPause ? <p  onClick={isPlayPause} className={footer.play__Icon}>
+               <IoPauseSharp className={footer.icons}/>
             </p>
             :
-            <p className={footer.play__Icon}>
-                <FaPlay onClick={isPlayPause} className={footer.playIcon}/>
+            <p onClick={isPlayPause} className={footer.play__Icon}>
+                <FaPlay  className={footer.playIcon}/>
             </p>}
 
             <AiFillStepForward className={footer.icons} />
