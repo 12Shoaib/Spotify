@@ -7,6 +7,7 @@
     color: white;
     background-color: #181818;
     padding-left: 1.3rem;
+    padding-top: 1.2rem;
 }
 .img__Style{
     width: 2rem;
@@ -30,6 +31,7 @@
     flex-direction: column;
     font-weight: 600;
     font-size: 0.9rem;
+    padding-right: 2rem;
 }
 .icon__Color{
     color: #1db954;
@@ -67,4 +69,19 @@
     display: flex;
     align-items: center;
     width: 30rem;
+}
+.rightSection__Icons{
+    font-size: 1.3rem;
+    padding-right: 0.4rem;
+}
+.right__Section{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25rem;
+}
+.rightSection__Volume{
+    position: relative;
+    top: -0.7rem;
+    font-weight:900;
 }

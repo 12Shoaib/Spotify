@@ -9,7 +9,9 @@ import {FaPlay} from 'react-icons/fa'
 import {IoPauseSharp} from 'react-icons/io5'
 import {FiRepeat} from 'react-icons/fi'
 import {TbMicrophone2} from 'react-icons/tb'
-import {HiOutlineSpeakerWave} from 'react-icons/hi'
+import {HiOutlineSpeakerWave} from 'react-icons/hi2'
+import {HiOutlineQueueList} from 'react-icons/hi2'
+import {MdOutlineSpeaker} from 'react-icons/md'
 
 
 
@@ -34,6 +36,7 @@ const Footer = () => {
             <p className={footer.song__Wrapper} >Kesariya from Brahmastra <span className={footer.artist__Name}>Pritam, Arijit singh</span></p>
            {like ? <FaHeart className={footer.icon__Color} onClick={isLike} /> : <FiHeart  onClick={isLike} /> }
             </div>
+
             <div className={footer.middle__Part}>
             <TiArrowShuffle className={footer.icons} />
             <AiFillStepBackward className={footer.icons} />
@@ -48,6 +51,14 @@ const Footer = () => {
 
             <AiFillStepForward className={footer.icons} />
             <FiRepeat className={footer.icon__repeat} />
+            </div>
+            <div className={footer.right__Section}>
+                <TbMicrophone2 className={footer.rightSection__Icons} />
+                <HiOutlineQueueList className={footer.rightSection__Icons} />
+                <MdOutlineSpeaker className={footer.rightSection__Icons} />
+                <HiOutlineSpeakerWave className={footer.rightSection__Icons}/>
+                <p className={footer.rightSection__Volume}>_____________</p>
+
             </div>
 
             </div>
