@@ -24,6 +24,7 @@ overflow: auto;
     width: 100vw;
     background-color:#1e0a36;
     height: 100vh;
+    color: white;
 }
 .poster__Img{
     width: 11rem;

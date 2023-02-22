@@ -1,10 +1,15 @@
-import MusicPlayer from './Components/MusicPlayer/MusicPlayer'
+import MusicPlayer from './Pages/MusicPlayer/MusicPlayer'
+import {Routes , Route } from 'react-router-dom'
+import Search from './Pages/Search.js/Search'
 
 const App = () => {
 
   return(
     <div>
-      <MusicPlayer />
+      <Routes>
+        <Route path='/' element={<MusicPlayer />}   />
+        <Route path='/search' element={<Search />}   />
+      </Routes>
     </div>
   )
 }

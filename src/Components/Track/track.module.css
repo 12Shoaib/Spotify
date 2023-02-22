@@ -1,0 +1,40 @@
+.track__Img{
+    width: 2rem;
+    height: 2rem;
+    padding-right: 1rem;
+}
+.track__heading{
+    padding: 0px;
+    margin: 0px;
+    padding-left: 0.4rem;
+    padding-right: 0.9rem
+}
+.main__Component{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    padding-top: 0.8rem;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 8rem;
+}
+.track__Song{
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: 550
+}
+.track__Song2{
+    padding: 0px;
+    margin: 0px;
+    color: rgba(255, 255, 255, 0.699);
+    font-size: 0.8rem;
+}
+.details{
+    padding-right: 11rem;
+    color: rgba(255, 255, 255, 0.806);
+}

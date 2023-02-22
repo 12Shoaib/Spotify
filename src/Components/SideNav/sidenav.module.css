@@ -15,6 +15,7 @@
     color: white;
     gap:0.5rem;
     font-weight: 650;
+    cursor: pointer;
     
 }
 .spotify__logo{

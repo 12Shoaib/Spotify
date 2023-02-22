@@ -7,6 +7,7 @@ import {FaPlay} from 'react-icons/fa'
 import {IoPauseSharp} from 'react-icons/io5'
 import { useRecoilState } from 'recoil'
 import {playPauseStatus , isLikeStatus} from '../../Recoil/Recoil'
+import MusicTrack from '../Track/MusicTrack'
 
 
 
@@ -55,7 +56,7 @@ const Poster = () => {
             </div>
 
             <div className={poster.bottom__Section}>
-
+               <MusicTrack /> 
 
             </div>
 

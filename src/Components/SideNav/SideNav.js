@@ -5,21 +5,30 @@ import {FiSearch} from 'react-icons/fi'
 import {MdLibraryMusic} from 'react-icons/md'
 import {FiPlus} from 'react-icons/fi'
 import {FaHeart} from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 
 
 
 const SideNav = () => {
+    const navigate = useNavigate()
+
+    const redirectSearchPage = () => {
+        navigate('/search')
+    } 
+    const redirectHomePage = () => {
+        navigate('/')
+    }
 
     return (
         <div className={sidenav.main__Component}>
 
             <div className={sidenav.sidenav__Wrapper}>
-            <p className={sidenav.heading__logo}><BsSpotify className={sidenav.spotify__logo} /> Spotify</p>
+            <p onClick={redirectHomePage} className={sidenav.heading__logo}><BsSpotify className={sidenav.spotify__logo} /> Spotify</p>
 
             <div className={sidenav.inside__content}>
 
-                <p className={sidenav.sub__headings}><TiHome className={sidenav.home__Icon} /> Home</p>
-                <p className={sidenav.sub__headings}><FiSearch className={sidenav.home__Icon}/>Search</p>
+                <p onClick={redirectHomePage} className={sidenav.sub__headings}><TiHome className={sidenav.home__Icon} /> Home</p>
+                <p onClick={redirectSearchPage} className={sidenav.sub__headings}><FiSearch className={sidenav.home__Icon}/>Search</p>
                 <p className={sidenav.sub__headings}><MdLibraryMusic className={sidenav.home__Icon} />Your Library</p>
             </div>
             <div className={sidenav.content__layer2}>
