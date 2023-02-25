@@ -2,7 +2,7 @@ import artist from './artist.module.css'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 import SideNav from '../../Components/SideNav/SideNav'
-import LibraryPoster from '../../Components/LibraryPoster/LibraryPoster'
+import ArtistPoster from '../../Components/ArtistPoster/ArtistPoster'
 
 const Artist = () => {
     return (
@@ -10,7 +10,7 @@ const Artist = () => {
             <Header />
             <SideNav />
             <Footer />
-            <LibraryPoster />
+            <ArtistPoster />
         </div>
     )
 }

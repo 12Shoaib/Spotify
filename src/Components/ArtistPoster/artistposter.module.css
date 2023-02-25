@@ -1,0 +1,68 @@
+.main__Component{
+    height: 63rem;
+    width: 64rem;
+    margin-left: 16.1rem;
+    background-color: rgba(0, 0, 0, 0.931);
+    color: white;
+}
+.header__Section{
+    position: absolute;
+    top: 1.5rem;
+}
+.links{
+    text-decoration: none;
+    color: white;
+    font-weight: 650;
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+.card__Wrapper{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 63.9rem;
+    top: 7rem;
+    gap: 1rem;
+    padding-left: 2rem;
+    padding-top: 8rem;
+    margin-bottom: 10rem;
+}
+.card__Photo{
+    height: 18rem;
+    width: 14rem;
+    border-radius: 10px;
+    background-color:rgba(0, 0, 0, 0.915) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.card__Photo:hover{
+    background-color: rgba(95, 95, 95, 0.374);
+    transition: 300ms ease-out;
+}
+.heading{
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 4rem;
+    left: 18.4rem;
+}
+.image{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+.sub__Heading{
+    padding: 0px;
+    margin: 0px;
+    font-weight: 650;
+    padding-top: 1rem;
+}
+.sub__Heading2{
+    padding: 0px;
+    margin: 0px;
+    color: rgba(135, 131, 131, 0.918);
+    padding-top: 0.5rem;
+}

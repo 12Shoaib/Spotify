@@ -2,7 +2,7 @@ import album from './album.module.css'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 import SideNav from '../../Components/SideNav/SideNav'
-import LibraryPoster from '../../Components/LibraryPoster/LibraryPoster'
+import AlbumPoster from '../../Components/AlbumsPoster/AlbumPoster'
 
 const Album = () => {
     return(
@@ -10,7 +10,7 @@ const Album = () => {
             <Header />
             <SideNav />
             <Footer />
-            <LibraryPoster />
+            <AlbumPoster />
 
         </div>
     )

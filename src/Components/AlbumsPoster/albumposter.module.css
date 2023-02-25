@@ -1,0 +1,71 @@
+.main__Component{
+    height: 34rem;
+    width: 64rem;
+    margin-left: 16.1rem;
+    background-color: rgba(0, 0, 0, 0.931);
+    color: white;
+}
+.header__Section{
+    position: absolute;
+    top: 1.5rem;
+}
+.links{
+    text-decoration: none;
+    color: white;
+    font-weight: 650;
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+.button{
+    width: 10rem;
+    height: 3rem; 
+    outline-color: 0px solid black;
+    border: 0.01rem solid black;
+    border-radius: 30px;
+    background-color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-left: 25rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.button:hover{
+    height: 3.1rem;
+    width: 10.1rem;
+    cursor: pointer;
+}
+.heading{
+    padding: 0px;
+    margin: 0px;
+    padding-top: 11rem;
+    padding-left: 20rem;
+
+}
+.sub__Heading{
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+}
+.circle__One{
+    height: 3rem;
+    width: 3rem;
+    border: 0.3rem solid white;
+    border-radius: 50%;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 5rem;
+    left: 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle__Two{
+    height: 0.7rem;
+    width: 0.7rem;
+    border: 0.3rem solid white;
+    border-radius: 50%;
+}
