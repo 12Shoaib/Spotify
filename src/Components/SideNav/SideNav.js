@@ -18,6 +18,9 @@ const SideNav = () => {
     const redirectHomePage = () => {
         navigate('/')
     }
+    const redirectLibraryPage = () => {
+        navigate('/library')
+    }
 
     return (
         <div className={sidenav.main__Component}>
@@ -29,7 +32,7 @@ const SideNav = () => {
 
                 <p onClick={redirectHomePage} className={sidenav.sub__headings}><TiHome className={sidenav.home__Icon} /> Home</p>
                 <p onClick={redirectSearchPage} className={sidenav.sub__headings}><FiSearch className={sidenav.home__Icon}/>Search</p>
-                <p className={sidenav.sub__headings}><MdLibraryMusic className={sidenav.home__Icon} />Your Library</p>
+                <p onClick={redirectLibraryPage} className={sidenav.sub__headings}><MdLibraryMusic className={sidenav.home__Icon} />Your Library</p>
             </div>
             <div className={sidenav.content__layer2}>
 

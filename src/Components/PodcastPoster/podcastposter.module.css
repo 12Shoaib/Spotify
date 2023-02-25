@@ -1,0 +1,126 @@
+.header__Section{
+    position: absolute;
+    top: 1.5rem;
+}
+.links{
+    text-decoration: none;
+    color: white;
+    font-weight: 650;
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+.main__Component{
+    margin-left: 16.1rem;
+    height: auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.925);
+}
+.middle__Section{
+    padding-top: 3rem;
+}
+.heading{
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20rem;
+    
+}
+.sub__Heading{
+    padding: 0px;
+    margin: 0px;
+    padding-left: 18rem;
+    font-weight: 550;
+    letter-spacing: 1px;
+    padding-top: 2.5rem;
+}
+.button{
+    width: 10rem;
+    height: 3rem; 
+    outline-color: 0px solid black;
+    border: 0.01rem solid black;
+    border-radius: 30px;
+    background-color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-left: 25rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.button:hover{
+    height: 3.1rem;
+    width: 10.1rem;
+    cursor: pointer;
+}
+.bottom__Section{
+    height: auto;
+    width: 61.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-left: 2rem;
+    margin-bottom: 4.9rem;
+}
+.card{
+    height: 18rem;
+    width: 14rem;
+    background-color:rgba(0, 0, 0, 0.929);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.card:hover{
+    background-color: rgba(95, 95, 95, 0.374);
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+.image{
+    height: 12rem;
+    width:11rem;
+    border-radius: 20px;
+}
+.sub__Heading2{
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0px;
+    margin: 0px;
+
+}
+/* Loader */
+
+.bottom__Section1{
+    height: auto;
+    width: 61.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-left: 2rem;
+}
+.card1{
+    height: 18rem;
+    width: 14rem;
+    background-color:rgba(129, 124, 124, 0.929);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.image1{
+    height: 12rem;
+    width:11rem;
+    border-radius: 20px;
+    background-color:rgba(61, 60, 60, 0.852);    
+}
+.sub__Heading__Loader{
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0px;
+    margin: 0px;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    background-color:rgba(61, 60, 60, 0.852);    
+
+}

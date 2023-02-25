@@ -1,12 +1,17 @@
 import searchposter from './searchposter.module.css'
 import {FiSearch} from 'react-icons/fi'
 import { useEffect , useState } from 'react'
+import { useRecoilState } from 'recoil'
+import {isMusic ,currentSong } from '../../Recoil/Recoil'
+
 
 const data = [1,2,3,4,5,6,7,8,9,0]
 const SearchPoster = () => {
     const [albums , setAlbums] = useState([])
     const [loader , setLoader] = useState(false)
-    const [music , setMusic] = useState('')
+    const [music , setMusic] = useRecoilState(isMusic)
+    const [selectedSong , setSelectedSong] = useRecoilState(currentSong)
+
 
     // useEffect(()=> {
         const options = {
@@ -29,6 +34,7 @@ const SearchPoster = () => {
         
     function ClickedValue (index)    {
         setMusic(selectedAlbumSong[index].hub.actions[1].uri)
+        setSelectedSong(selectedAlbumSong[index])
     }
 
     return (
@@ -53,7 +59,6 @@ const SearchPoster = () => {
             </div>}
 
                 <div className={searchposter.card__Container}>
-                <audio src={music}  controls/>
                     { albums?.map((element , index) =><div className={searchposter.card__Wrapper}>
 
                     {/* <img className={searchposter.searchposter__Img} src='https://i.scdn.co/image/ab67616d00001e02c08202c50371e234d20caf62' /> */}

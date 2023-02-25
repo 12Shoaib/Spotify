@@ -30,9 +30,8 @@
 .sub__headings:hover{
     color: white;
     cursor: pointer;
-    transition: 450ms ease-out;
-   
-}   
+    transition: 450ms ease-out; 
+} 
 .sub__headings{
     display: flex;
     align-items: center;
