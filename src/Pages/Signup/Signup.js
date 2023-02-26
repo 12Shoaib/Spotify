@@ -4,12 +4,24 @@ import Button from '../../Atoms/Button/Button'
 import Input from '../../Atoms/Input/Input'
 import {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
+import {auth} from '../../FirebaseSetup/Firebase'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
 
 const Signup = () => {
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
     const [profileName , setProfileName] = useState('')
     const navigate = useNavigate()
+
+    const handleSignUp = () => {
+    createUserWithEmailAndPassword(auth,email,password,profileName)
+    .then((userCredentials) => {
+        console.log(userCredentials)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+    }
 
     const redirectLogInPage = () => {
         navigate('/signin')
@@ -39,7 +51,7 @@ const Signup = () => {
          <Input onChange={profileNameCapture} type='text' placeholder='Enter a profile name.' />
          
          <p className={signup.sub__Heading2}>This appers on your profile.</p>
-         <Button name='Sign up' />
+         <Button onClick={handleSignUp} name='Sign up' />
          </div>
          <p className={signup.sub__Heading4}>Have an account?</p>
          <button onClick={redirectLogInPage} className={signup.google__Button}>Login to SPOTIFY </button>

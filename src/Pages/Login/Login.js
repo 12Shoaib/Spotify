@@ -4,12 +4,25 @@ import Button from '../../Atoms/Button/Button'
 import Input from '../../Atoms/Input/Input'
 import {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
+import {auth} from '../../FirebaseSetup/Firebase'
+import { signInWithEmailAndPassword } from 'firebase/auth'
 
 
 const Login = () => {
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
     const navigate = useNavigate()
+
+    const handleLogIn = () => {
+        //firebase code
+        signInWithEmailAndPassword(auth , email , password)
+        .then((userCredential) => {
+            console.log(userCredential)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }
 
     const redirectSignupPage = () => {
         navigate('/signup')
@@ -33,7 +46,7 @@ const Login = () => {
          <p className={login.sub__Heading}>Password</p>
          <Input onChange={passwordCapture} type='password' placeholder='Password' />
          <p className={login.sub__Heading2}>Forgot your password?</p>
-         <Button name='Log-in' />
+         <Button onClick={handleLogIn} name='Log-in' />
          </div>
          <p className={login.sub__Heading4}>Don't have an account?</p>
          <button onClick={redirectSignupPage} className={login.google__Button}>SIGNUP FOR SPOTIFY </button>
