@@ -10,8 +10,8 @@
     padding-top: 1.2rem;
 }
 .img__Style{
-    width: 2rem;
-    height: 2rem;
+    max-width: 2rem;
+    max-height: 2rem;
     padding-right: 0.7rem;
 }
 .footer__Wrapper{
@@ -82,6 +82,13 @@
 }
 .rightSection__Volume{
     position: relative;
-    top: -0.7rem;
-    font-weight:900;
+    background: linear-gradient(red, black);
+    height: 0.2rem;
+}
+.rightSection__Volume::-webkit-slider-runnable-track{
+    color: #1db954;
+}
+.rightSection__Volume:hover{
+    color: #1db954;
+    cursor: pointer;
 }

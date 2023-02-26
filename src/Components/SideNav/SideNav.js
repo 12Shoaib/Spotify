@@ -6,6 +6,7 @@ import {MdLibraryMusic} from 'react-icons/md'
 import {FiPlus} from 'react-icons/fi'
 import {FaHeart} from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
+import {CgArrowDownO} from 'react-icons/cg'
 
 
 
@@ -20,6 +21,12 @@ const SideNav = () => {
     }
     const redirectLibraryPage = () => {
         navigate('/library')
+    }
+    const redirectLikePage = () => {
+        navigate('/likes')
+    }
+    const redirectDownloadPage = () => {
+        navigate('/download')
     }
 
     return (
@@ -37,11 +44,11 @@ const SideNav = () => {
             <div className={sidenav.content__layer2}>
 
                 <p className={sidenav.sub__headings}><span className={sidenav.icon_outline}><FiPlus /></span> Create Playlist</p>
-                <p className={sidenav.sub__headings}><span className={sidenav.icon_outline2}><FaHeart className={sidenav.heartIcon} /></span> Liked Songs</p>
+                <p onClick={redirectLikePage} className={sidenav.sub__headings}><span className={sidenav.icon_outline2}><FaHeart className={sidenav.heartIcon} /></span> Liked Songs</p>
              </div>
 
             </div>  
-            
+            <p onClick={redirectDownloadPage} className={sidenav.install}><CgArrowDownO className={sidenav.icon__Install} />Install App</p>
         </div>
     )
 }

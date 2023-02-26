@@ -35,6 +35,7 @@ const SearchPoster = () => {
     function ClickedValue (index)    {
         setMusic(selectedAlbumSong[index].hub.actions[1].uri)
         setSelectedSong(selectedAlbumSong[index])
+        localStorage.setItem("currentSong" , JSON.stringify(selectedSong))
     }
 
     return (

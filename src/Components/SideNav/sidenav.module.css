@@ -70,3 +70,28 @@
     color: white;
     font-size: 0.9rem;
 }
+.install{
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    margin-top: 9rem;
+    color: grey;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.icon__Install{
+    color: grey;
+    font-size: 1.7rem;
+}
+.icon__Install:hover{
+    color: white;
+}
+.install:hover{
+    color: white;
+    transition: 200ms ease-out;
+}

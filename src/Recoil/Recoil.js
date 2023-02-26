@@ -16,5 +16,5 @@ export const isMusic = atom({
 })
 export const currentSong = atom({
     key:'currentSong',
-    default:[]
+    default:{}
 })

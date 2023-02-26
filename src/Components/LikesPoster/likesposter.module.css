@@ -1,42 +1,39 @@
 .main__Component{
-margin-left: 16.1rem;
-overflow: auto;
+    height: 33rem;
+    width: 64rem;
+    margin-left: 16.1rem;
+    background-color: rgba(0, 0, 0, 0.931);
+    color: white;
 }
 .upper__Section{
     width: 100vw;
     height: 15rem;
     padding-top: 4rem;
     padding-left: 3rem;
-    background-color: #7113ed;
     display: flex;
+    background-color:rgba(80, 80, 211, 0.715) ;
     gap: 2rem;
 }
-.middle__Section{
-    width: 100vw;
-    color: white;
-    background-color: #500ca3;
-    height: 6rem;
-    display: flex;
-    align-items: center;
-    gap:1.2rem;
-    padding-left: 1.5rem;
-}.bottom__Section{
-    width: 100vw;
-    background-color:#1e0a36;
-    height: 100vh;
-    color: white;
-}
-.poster__Img{
+.icon__Wrapper{
     width: 11rem;
     height: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgb(68, 68, 230) , rgb(186, 179, 225));
+
+}
+.icon{
+    font-size: 4rem;
 }
 .heading{
     padding: 0px;
     margin: 0px;
     color: white;
-    font-weight: 600;
+    font-weight: 630;
     font-size: 0.7rem;
     text-transform: uppercase;
+    padding-top: 1rem;
 }
 .heading2{
     padding: 0px;
@@ -45,30 +42,15 @@ overflow: auto;
     font-weight: 700;
     font-size: 5rem;   
 }
-.heading3{
-    padding: 0px;
-    margin: 0px;
+.middle__Section{
+    width: 100vw;
     color: white;
-    font-weight: 600;
-    color: rgba(199, 199, 199, 0.806);
-    font-size: 0.9rem;
-    padding: 0.4rem;
-    
-}.heading4{
-    padding: 0px;
-    margin: 0px;
-    color: rgba(255, 255, 255, 0.868);
+    background-color: rgba(40, 40, 104, 0.943) ;
+    height: 6rem;
     display: flex;
     align-items: center;
-    font-weight: 600;
-    padding-left: 0.3rem;
-    
-}
-.spotify__Logo{
-    color: #1db954;
-    border: 0.01rem solid black;
-    border-radius: 50%;
-    background: black;
+    gap:1.2rem;
+    padding-left: 1.5rem;
 }
 .play__Icon{
     padding: 0px;
@@ -94,4 +76,22 @@ overflow: auto;
 .icon__Color2{
     color: white;
     font-size: 1.8rem;
+}
+.clock{
+    color: gray;
+}
+.content__Title{
+    margin-top: 4.5rem;
+    width: 60rem;
+    color: gray ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+}
+.bottom__Section{
+    width: auto;
+    background-color:#1e0a36;
+    height: auto;
+    color: white;
 }

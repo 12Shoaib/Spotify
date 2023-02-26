@@ -1,4 +1,5 @@
 import footer from './footer.module.css';
+import {VscMute} from 'react-icons/vsc'
 import {useRecoilState, useRecoilValue} from 'recoil'
 import {FaHeart} from 'react-icons/fa'
 import {FiHeart} from 'react-icons/fi'
@@ -13,16 +14,27 @@ import {HiOutlineSpeakerWave} from 'react-icons/hi2'
 import {HiOutlineQueueList} from 'react-icons/hi2'
 import {MdOutlineSpeaker} from 'react-icons/md'
 import {playPauseStatus , isLikeStatus , isMusic , currentSong} from '../../Recoil/Recoil'
-import {useRef , useState} from 'react'
-
+import { useRef , useEffect , useState } from 'react'
 
 
 const Footer = () => {
+    const [volume , setVolume] = useState(55)
     const [like , setLike] = useRecoilState(isLikeStatus)
     const [playPause , setPlayPause]  = useRecoilState(playPauseStatus)
     const _currentSong = useRecoilValue(isMusic)
-    const currentAlbum = useRecoilValue(currentSong)
+    let currentAlbum = useRecoilValue(currentSong) 
     const audio = useRef()
+
+    useEffect(() => {
+        if(audio){
+            audio.current.volume = volume/100
+        }
+    } , [audio , volume])
+
+
+    const handleVolume =(e) => {
+        setVolume(e.target.value)
+    }
     const isLike = () => {
         setLike(!like)
     }
@@ -43,8 +55,8 @@ const Footer = () => {
             <audio src={_currentSong} ref={audio}/>
 
             <div className={footer.left_Section}>   
-            <img src='https://i.scdn.co/image/ab67616d0000b273c08202c50371e234d20caf62' alt='' className={footer.img__Style} />   
-            <p className={footer.song__Wrapper} >Kesariya from Brahmastra <span className={footer.artist__Name}>Pritam, Arijit singh</span></p>
+            <img src={currentAlbum?.share?.image} alt='' className={footer.img__Style} />   
+            <p className={footer.song__Wrapper} >{currentAlbum?.title} <span className={footer.artist__Name}>{currentAlbum?.subtitle}</span></p>
            {like ? <FaHeart className={footer.icon__Color} onClick={isLike} /> : <FiHeart  onClick={isLike} /> }
             </div>
 
@@ -67,8 +79,11 @@ const Footer = () => {
                 <TbMicrophone2 className={footer.rightSection__Icons} />
                 <HiOutlineQueueList className={footer.rightSection__Icons} />
                 <MdOutlineSpeaker className={footer.rightSection__Icons} />
-                <HiOutlineSpeakerWave className={footer.rightSection__Icons}/>
-                <p className={footer.rightSection__Volume}>_____________</p>
+               {volume == 0 ? 
+               <VscMute className={footer.rightSection__Icons} />
+               :
+               <HiOutlineSpeakerWave className={footer.rightSection__Icons}/> }
+                <input  type='range' min={0} max={100} value={volume} onChange={handleVolume} className={footer.rightSection__Volume}/>
 
             </div>
 
