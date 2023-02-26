@@ -1,0 +1,16 @@
+.button{
+    height: 3rem;
+    width: 9rem;
+    background-color: #1db954;
+    color: black;
+    outline: none;
+    border: 0.01rem solid black;
+    border-radius: 30px;
+    font-weight: 640;
+    cursor: pointer;
+    float: right;
+    text-transform: uppercase;
+}
+.button:active{
+    background-color: #38b764ce;
+}

@@ -8,6 +8,7 @@ import Artist from './Pages/Artist/Artist'
 import Album from './Pages/Albums/Albums'
 import Download from './Pages/Download/Download'
 import Likes from './Pages/Likes/Likes'
+import Login from './Pages/Login/Login'
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/album' element={<Album />}   />
         <Route path='/download' element={<Download />}   />
         <Route path='/likes' element={<Likes />}   />
+        <Route path='/login' element={<Login />}   />
       </Routes>
     </div>
   )
