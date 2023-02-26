@@ -3,11 +3,17 @@ import {BsSpotify} from 'react-icons/bs'
 import Button from '../../Atoms/Button/Button'
 import Input from '../../Atoms/Input/Input'
 import {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
+
 
 const Login = () => {
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
+    const navigate = useNavigate()
 
+    const redirectSignupPage = () => {
+        navigate('/signup')
+    }
     const emailCapture = (e) => {
         setEmail(e.target.value)
     }
@@ -30,7 +36,7 @@ const Login = () => {
          <Button name='Log-in' />
          </div>
          <p className={login.sub__Heading4}>Don't have an account?</p>
-         <button className={login.google__Button}>SIGNUP FOR SPOTIFY </button>
+         <button onClick={redirectSignupPage} className={login.google__Button}>SIGNUP FOR SPOTIFY </button>
          
         </div>
     )

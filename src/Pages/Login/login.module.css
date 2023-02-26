@@ -24,8 +24,12 @@
     letter-spacing: 1px;
     font-size: 2.5rem;
     gap:0.6rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+    border-bottom:0.01rem solid rgba(255, 255, 255, 0.244);
+    padding-left: 7rem;
+    padding-right: 7rem;
 }
 .icon__Spotify{
     color: #1db954;
@@ -34,16 +38,16 @@
 .sub__Heading{
     padding: 0px;
     margin: 0px;
-    color: white;
     font-weight: 600;
     font-size: 0.9rem;
     padding: 0.1rem;
-    color: rgb(223, 220, 220);
+    color: rgba(223, 220, 220, 0.909);
+
 }
 .sub__Heading2{
     padding: 0px;
     margin: 0px;
-    color: rgb(223, 220, 220);
+    color: rgba(223, 220, 220, 0.909);
     font-weight: 400;
     font-family: 0.9rem;
     text-decoration: underline;
@@ -56,7 +60,7 @@
 .sub__Heading3{
     padding: 0px;
     margin: 0px;
-    color: white;
+    color: rgba(223, 220, 220, 0.909);
     font-weight: 600;
     font-size: 0.9rem;
     padding: 0.1rem;
@@ -79,7 +83,7 @@
     outline: none;
     cursor: pointer;
     text-transform: uppercase;
-    color: rgb(212, 209, 209);
+    color: rgba(223, 220, 220, 0.909);
     border-radius: 30px;
     margin-bottom: 1rem;
     background-color: black;
@@ -95,7 +99,7 @@
 }
 .or__Element{
     position: absolute;
-    top: 17.4rem;
+    top: 18.8rem;
     left: 39.6rem;
 }
 .middle__divsion{
