@@ -18,3 +18,4 @@ export const currentSong = atom({
     key:'currentSong',
     default:{}
 })
+

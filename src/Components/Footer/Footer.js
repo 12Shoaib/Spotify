@@ -13,24 +13,25 @@ import {TbMicrophone2} from 'react-icons/tb'
 import {HiOutlineSpeakerWave} from 'react-icons/hi2'
 import {HiOutlineQueueList} from 'react-icons/hi2'
 import {MdOutlineSpeaker} from 'react-icons/md'
-import {playPauseStatus , isLikeStatus , isMusic , currentSong} from '../../Recoil/Recoil'
+import {playPauseStatus , isLikeStatus , isMusic , currentSong } from '../../Recoil/Recoil'
 import { useRef , useEffect , useState } from 'react'
 
 
 const Footer = () => {
+
     const [volume , setVolume] = useState(55)
     const [like , setLike] = useRecoilState(isLikeStatus)
     const [playPause , setPlayPause]  = useRecoilState(playPauseStatus)
     const _currentSong = useRecoilValue(isMusic)
-    let currentAlbum = useRecoilValue(currentSong) 
+    const currentAlbum = useRecoilValue(currentSong) 
     const audio = useRef()
+    const selectedAlbumSong =   JSON.parse(localStorage.getItem('data'))
 
     useEffect(() => {
         if(audio){
             audio.current.volume = volume/100
         }
     } , [audio , volume])
-
 
     const handleVolume =(e) => {
         setVolume(e.target.value)
