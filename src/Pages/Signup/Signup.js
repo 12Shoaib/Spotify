@@ -10,11 +10,11 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 const Signup = () => {
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
-    const [profileName , setProfileName] = useState('')
+    const [displayName , setProfileName] = useState('')
     const navigate = useNavigate()
 
     const handleSignUp = () => {
-    createUserWithEmailAndPassword(auth,email,password,profileName)
+    createUserWithEmailAndPassword(auth,email,password,displayName)
     .then((userCredentials) => {
         console.log(userCredentials)
     })
@@ -42,14 +42,13 @@ const Signup = () => {
          <h2 className={signup.sub__Heading3}>Sign up for free to start listening.</h2>
           <button className={signup.google__Button}><img src='https://p7.hiclipart.com/preview/344/344/59/google-logo-g-suite-google.jpg' className={signup.google__Icon}/> Sign up with google </button>
           <button className={signup.google__Button}>Sign up with phone </button>
-         <div className={signup.middle__divsion}><p className={signup.or__Container}>_____________________________</p><span className={signup.or__Element}>or</span><p className={signup.or__Container}> _____________________________</p></div>
+         <div className={signup.middle__divsion}></div>
          <p className={signup.sub__Heading}>What's your email?</p>
          <Input onChange={emailCapture} type='email' placeholder='Enter your email' />
          <p className={signup.sub__Heading}>Create a password</p>
          <Input onChange={passwordCapture} type='password' placeholder='Creat a password' />
          <p className={signup.sub__Heading}>What should we call you?</p>
          <Input onChange={profileNameCapture} type='text' placeholder='Enter a profile name.' />
-         
          <p className={signup.sub__Heading2}>This appers on your profile.</p>
          <Button onClick={handleSignUp} name='Sign up' />
          </div>

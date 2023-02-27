@@ -86,23 +86,11 @@
 .google__Button:active{
       background-color: rgba(31, 30, 30, 0.9);
 }
-.or__Container{
-    margin-top:1rem;
-    margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.32);
-}
-.or__Element{
-    position: absolute;
-    top: 18.8rem;
-    left: 39.6rem;
-}
 .middle__divsion{
-    display: flex;
-    align-items: center;
-    gap: 1.4rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.32);
+    border-bottom: 0.01rem solid rgba(255, 255, 255, 0.32);
 }
 .sub__Heading4{
     padding: 0px;
