@@ -1,0 +1,78 @@
+.main__Component{
+    height: auto;
+    width: auto;
+    background-image: linear-gradient(rgb(7, 97, 114),black) ;
+    margin-left: 16.1rem;
+    color: white;
+    padding-left: 1.6rem;
+}
+.heading{
+    padding: 0px;
+    margin: 0px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.home__Skeleton{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.home__Skeleton1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}
+.card__Xl{
+    height: 5rem;
+    width: 19.6rem;
+    background-color: rgba(52, 51, 51, 0.797);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 2rem;
+}
+.home__Img{
+    height: 5rem;
+    background-color: rgba(35, 34, 34, 0.797);
+    width: 5rem;
+}
+.hom_Subheading{
+    width: 10rem;
+    height: 1.9rem;
+    border-radius: 30px;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(35, 34, 34, 0.797);
+}
+.card__Xxl{
+    height: 17rem;
+    width: 14rem;
+    background-color: rgba(52, 51, 51, 0.797);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home__Img1{
+    height: 10rem;
+    width: 10rem;
+    background-color: rgba(35, 34, 34, 0.797);
+}
+.home_Subheading1{
+    height: 1.6rem;
+    background-color: rgba(35, 34, 34, 0.797);
+    width: 12rem;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 0.8rem;
+    border-radius: 30px;
+}
+.home_Subheading2{
+    height: 1.6rem;
+    background-color: rgba(35, 34, 34, 0.797);
+    width: 12rem;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 30px;
+}

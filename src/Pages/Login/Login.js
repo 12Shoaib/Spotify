@@ -18,6 +18,7 @@ const Login = () => {
         signInWithPopup(auth,provider)
         .then((user) => {
             console.log(user)
+            navigate('/')
         })
         .catch((error) => {
             console.log(error)

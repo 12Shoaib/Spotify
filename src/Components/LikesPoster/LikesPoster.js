@@ -37,13 +37,7 @@ const LikesPoster =  () => {
                 <FaPlay  className={likesposter.playIcon}/>
             </p>}
             <FiMoreHorizontal className={likesposter.icons} />
-            <div className={likesposter.content__Title}>
-                 <p>#</p>   
-                 <p>Tittle</p>   
-                 <p>Album</p>   
-                 <p>Date added</p>   
-                 <p><CiClock2 className={likesposter.clock}/></p>   
-            </div>
+           
             </div>
             <div className={likesposter.bottom__Section}>
                <MusicTrack /> 

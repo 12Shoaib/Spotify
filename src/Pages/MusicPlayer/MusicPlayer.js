@@ -3,6 +3,7 @@ import SideNav from '../../Components/SideNav/SideNav'
 import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
 import Poster from '../../Components/Poster/Poster'
+import HomePoster from '../../Components/HomePoster/HomePoster'
 
 const MusicPlayer  = () => {        
     return (
@@ -11,7 +12,7 @@ const MusicPlayer  = () => {
            <div className={musicplayer.main__Component}>
                 <Header />
                 <SideNav />
-                <Poster />
+                <HomePoster />
                 <Footer />
         </div>
         </div>
