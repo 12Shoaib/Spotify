@@ -4,17 +4,22 @@ import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
 import Poster from '../../Components/Poster/Poster'
 import HomePoster from '../../Components/HomePoster/HomePoster'
+import Login from '../Login/Login'
+import {loginValue} from '../../Recoil/Recoil'
+import {useRecoilValue} from 'recoil'
 
 const MusicPlayer  = () => {        
+    const isLogIn = useRecoilValue(loginValue)
     return (
         <div className={musicplayer.musicplayer__Wrapper}>
 
+           {isLogIn ? 
            <div className={musicplayer.main__Component}>
                 <Header />
                 <SideNav />
                 <HomePoster />
                 <Footer />
-        </div>
+        </div> : <Login /> }
         </div>
     )
 }

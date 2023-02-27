@@ -19,3 +19,7 @@ export const currentSong = atom({
     default:{}
 })
 
+export const loginValue = atom({
+    key:'loggedin key',
+    default:false
+})

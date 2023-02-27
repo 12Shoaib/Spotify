@@ -1,10 +1,24 @@
 .main__Component{
     height: auto;
     width: auto;
-    background-image: linear-gradient(rgb(7, 97, 114),black) ;
     margin-left: 16.1rem;
     color: white;
+}
+.top__Section{
+    background-image: linear-gradient(rgb(7, 97, 114),rgba(0,0,0,0.925)) ;
+    padding: 0px;
+    margin: 0px;
     padding-left: 1.6rem;
+    padding-bottom: 3rem;
+}
+.bottom__Section{
+    padding: 0px;
+    margin: 0px;
+    padding-left: 1.6rem;
+    background-color: rgba(0, 0, 0, 0.946);
+    background-image: linear-gradient(rgba(6, 38, 45, 0.244),rgba(0, 0, 0, 0.925));
+    padding-bottom: 2rem;
+    border: 0.01rem solid black;
 }
 .home__Content{
     display: flex;
@@ -14,7 +28,8 @@
 .home__Content1{
     display: flex;
     flex-wrap: wrap;
-    gap: 1.6rem;
+    gap: 1rem;
+    margin-bottom: 5.5rem
 }
 .card__Content__Xl{
     height: 5rem;
@@ -23,21 +38,80 @@
     align-items: center;
     cursor: pointer;
     gap: 2rem;
-    border: 0.01rem solid white;
+    background-color: rgba(88, 139, 150, 0.612);
+    border-radius: 5px;
+}
+.card__Content__Xl:hover{
+    background-color: rgba(89, 136, 145, 0.932);
+    background-color: rgba(97, 151, 164, 0.865);
 }
 .content__Img{
     height: 5rem;
     width: 5rem;
-    border: 0.01rem solid white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .content__Subheading{
     width: 10rem;
-    height: 1.9rem;
-    border-radius: 30px;
+    max-height: 3rem;
     padding: 0px;
     margin: 0px;
-    border: 0.01rem solid white;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
+.card__Content__Xxl{
+    height: 17rem;
+    width: 14.5rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:rgba(0, 0, 0, 0.929) ;
+}
+.card__Content__Xxl:hover{
+    background-color: rgba(95, 95, 95, 0.374);
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+.content__Img1{
+    height: 10rem;
+    width: 12rem;
+    border-radius: 6px;
+}
+.content__Subheading1{
+    width: 10rem;
+    max-height: 3rem;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.content__Subheading2{
+    width: 10rem;
+    max-height: 3rem;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    color: grey;
+    font-size: 0.8rem;
+}
+.subHeading__Wrapper{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-top: 0.8rem;
+}
+
+
 /* Loader css */
 .heading{
     padding: 0px;
@@ -54,6 +128,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.6rem;
+    margin-bottom: 5.5rem
 }
 .card__Xl{
     height: 5rem;

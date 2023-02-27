@@ -77,7 +77,6 @@ const SearchPoster = () => {
             {data?.map(() =><div className={searchposter.loader__card__Wrapper}>
                
                <p className={searchposter.loader__searchposter__Img} ></p>
-               {/* <h6>{element.share.subject}</h6> */}
                <p className={searchposter.sub__Heading}></p>
                <p className={searchposter.sub__Heading}></p>
             </div>)}
