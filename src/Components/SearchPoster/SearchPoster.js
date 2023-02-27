@@ -32,7 +32,7 @@ const SearchPoster = () => {
         };
         const fetchAlbums = async() => {
             setLoader(true)
-            const response = await fetch('https://shazam.p.rapidapi.com/charts/track?locale=en-US&pageSize=20&startFrom=20', options)
+            const response = await fetch('https://shazam.p.rapidapi.com/charts/track?locale=hiphop&pageSize=20&startFrom=20', options)
             const data  = await response.json()
             setAlbums(data.tracks)
             setLoader(false)

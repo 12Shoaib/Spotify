@@ -82,17 +82,14 @@
     justify-content: center;
     color: white;
     border-radius: 20px;
-    animation:1s linear infinite alternate;
+    animation: blink 1.5s linear infinite;
 }
-@keyframes loader__card__Wrapper {
-0% {
-    background-color:rgba(141, 140, 140, 0.763) ;
-}
-100%{
-    background-color: rgba(128, 123, 123, 0.671);
+@keyframes blink{
+    50%{
+    background-color:rgba(97, 97, 97, 0.763) ;
+    }
 }
     
-}
 .loader__searchposter__Img{
     height: 12rem;
     width:11rem;
