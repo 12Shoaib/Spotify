@@ -18,7 +18,7 @@ return(
             Liked Songs
         </h1>
         <p className={libraryposter.libraryPoster__Sub_Heading}>
-           COUNT Liked Songs
+           0.Liked Songs
         </p>
         </div>
 
