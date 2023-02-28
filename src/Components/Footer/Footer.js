@@ -25,7 +25,10 @@ const Footer = () => {
     const _currentSong = useRecoilValue(isMusic)
     const currentAlbum = useRecoilValue(currentSong) 
     const audio = useRef()
+    const selectedAlbumSong =   JSON.parse(localStorage.getItem('data'))
 
+    console.log(currentAlbum)
+    
     useEffect(() => {
         if(audio){
             audio.current.volume = volume/100
@@ -79,7 +82,7 @@ const Footer = () => {
                 <TbMicrophone2 className={footer.rightSection__Icons} />
                 <HiOutlineQueueList className={footer.rightSection__Icons} />
                 <MdOutlineSpeaker className={footer.rightSection__Icons} />
-               {volume === 0 ? 
+               {volume == 0 ? 
                <VscMute className={footer.rightSection__Icons} />
                :
                <HiOutlineSpeakerWave className={footer.rightSection__Icons}/> }

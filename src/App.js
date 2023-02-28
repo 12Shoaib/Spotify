@@ -10,14 +10,17 @@ import Download from './Pages/Download/Download'
 import Likes from './Pages/Likes/Likes'
 import Login from './Pages/Login/Login'
 import Signup from './Pages/Signup/Signup'
+import {loginValue} from './Recoil/Recoil'
+import { useRecoilValue } from 'recoil'
 
 const App = () => {
+      const logInStatus = useRecoilValue(loginValue)
 
   return(
     <div>
       <Routes>
         <Route path='/' element={<MusicPlayer />}   />
-        <Route path='/search' element={<Search />}   />
+     {logInStatus && <>  <Route path='/search' element={<Search />}   />
         <Route path='/library' element={<Library />}   />
         <Route path='/playlist' element={<Playlist />}   />
         <Route path='/podcast' element={<Podcast />}   />
@@ -26,7 +29,7 @@ const App = () => {
         <Route path='/download' element={<Download />}   />
         <Route path='/likes' element={<Likes />}   />
         <Route path='/signin' element={<Login />}   />
-        <Route path='/signup' element={<Signup />}   />
+        <Route path='/signup' element={<Signup />}   /> </>}
       </Routes>
     </div>
   )

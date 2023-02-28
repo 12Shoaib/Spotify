@@ -49,16 +49,15 @@ const HomePoster = () => {
       }  
       fetchingForYou()
     },[])
-    function ClickedValue (index) {
-      console.log('running')
+    function topAlbumClickedValue (index) {
+      console.log(topAlbums[index] , 'newShoain')
       setMusic(topAlbums[index].hub.actions[1].uri)
       setSelectedSong(topAlbums[index])
-      localStorage.setItem("currentSong" , JSON.stringify(selectedSong))
   }
-    function AlbumClicked (index) {
-      setMusic(topAlbums[index].hub.actions[1].uri)
-      setSelectedSong(topAlbums[index])
-      localStorage.setItem("currentSong" , JSON.stringify(selectedSong))
+    function forYouAlbumClicked (index) {
+      console.log(forYou[index] , 'shoaib')
+      setMusic(forYou[index].hub.actions[1].uri)
+      setSelectedSong(forYou[index])
     }
     return(
         <div className={homeposter.main__Component}>
@@ -79,7 +78,7 @@ const HomePoster = () => {
             </div>  }
 
            <div className={homeposter.home__Content}>
-          {topAlbums.map((element , index) => <div onClick={() => ClickedValue(index)}  className={homeposter.card__Content__Xl}>
+          {topAlbums.map((element , index) => <div onClick={() => topAlbumClickedValue(index)}  className={homeposter.card__Content__Xl}>
             <img alt='img' src={element?.share?.image|| "https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560"}  className={homeposter.content__Img} />
             <p className={homeposter.content__Subheading}>{element?.title || 'noTittle'}</p>
             </div>)}
@@ -89,7 +88,7 @@ const HomePoster = () => {
             <h1 className={homeposter.heading}>Made for you</h1>
             <div className={homeposter.home__Content1}>
            {forYou.map((element , index) =>  <div className={homeposter.card__Content__Xxl}>
-            <img onClick={() => AlbumClicked(index)} alt='img' src={element?.share?.image|| "https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560"}  className={homeposter.content__Img1}/>
+            <img onClick={() => forYouAlbumClicked(index)} alt='img' src={element?.share?.image|| "https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560"}  className={homeposter.content__Img1}/>
             <div className={homeposter.subHeading__Wrapper}>
             <p  className={homeposter.content__Subheading1}> {element?.title}</p>
             <p  className={homeposter.content__Subheading2}>{element?.subtitle}</p>
