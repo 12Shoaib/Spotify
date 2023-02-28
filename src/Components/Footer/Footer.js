@@ -25,7 +25,6 @@ const Footer = () => {
     const _currentSong = useRecoilValue(isMusic)
     const currentAlbum = useRecoilValue(currentSong) 
     const audio = useRef()
-    const selectedAlbumSong =   JSON.parse(localStorage.getItem('data'))
 
     useEffect(() => {
         if(audio){
@@ -56,7 +55,7 @@ const Footer = () => {
             <audio src={_currentSong} ref={audio}/>
 
             <div className={footer.left_Section}>   
-            <img src={currentAlbum?.share?.image} alt='' className={footer.img__Style} />   
+            <img src={currentAlbum?.share?.image} alt='image' className={footer.img__Style} />   
             <p className={footer.song__Wrapper} >{currentAlbum?.title} <span className={footer.artist__Name}>{currentAlbum?.subtitle}</span></p>
            {like ? <FaHeart className={footer.icon__Color} onClick={isLike} /> : <FiHeart  onClick={isLike} /> }
             </div>
@@ -80,7 +79,7 @@ const Footer = () => {
                 <TbMicrophone2 className={footer.rightSection__Icons} />
                 <HiOutlineQueueList className={footer.rightSection__Icons} />
                 <MdOutlineSpeaker className={footer.rightSection__Icons} />
-               {volume == 0 ? 
+               {volume === 0 ? 
                <VscMute className={footer.rightSection__Icons} />
                :
                <HiOutlineSpeakerWave className={footer.rightSection__Icons}/> }

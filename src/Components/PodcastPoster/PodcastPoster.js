@@ -57,7 +57,7 @@ useEffect(() => {
         </div>}
         <div className={podcastposter.bottom__Section}>
            {podcast.map((element) =>  <div className={podcastposter.card}>
-            <img src={element.data.coverArt.sources[2].url} className={podcastposter.image} />
+            <img alt='img' src={element.data.coverArt.sources[2].url} className={podcastposter.image} />
             <p className={podcastposter.sub__Heading2}>{element.data.name}</p>
             </div>)}
 

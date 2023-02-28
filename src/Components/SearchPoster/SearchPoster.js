@@ -16,13 +16,13 @@ const SearchPoster = () => {
     const [searchOff , setSearchOff] = useState(true)
     
    useEffect(() => {
-    if(search == ''){
+    if(search === ''){
         setSearchOff(true)
     }else{
         setSearchOff(false)
     }
-   })
-    // useEffect(()=> {
+   } , [search])
+    useEffect(()=> {
         const options = {
             method: 'GET',
             headers: {
@@ -37,7 +37,8 @@ const SearchPoster = () => {
             setAlbums(data.tracks)
             setLoader(false)
         }
-        // },[])
+        fetchAlbums()
+        },[])
         localStorage.setItem("data" , JSON.stringify(albums))
         const selectedAlbumSong =   JSON.parse(localStorage.getItem('data'))
         
@@ -68,7 +69,6 @@ const SearchPoster = () => {
             <div className={searchposter.searchposter__searchWrapper}>
              <FiSearch onClick={searchQuery} className={searchposter.search__Icon} />
               <input onChange={(e) => setSearch(e.target.value)} placeholder='What do you want to listen to?' className={searchposter.search__Bar}  />
-              <p onClick={fetchAlbums}>Click HERE TO FETCH</p>
               
             </div>
             
@@ -85,13 +85,13 @@ const SearchPoster = () => {
 
             {searchOff &&  <div className={searchposter.card__Container}>
                     { albums?.map((element , index) =><div className={searchposter.card__Wrapper}>
-                    <img onClick={()=>ClickedValue(index)} className={searchposter.searchposter__Img} src={element.share.image} />
+                    <img alt='img' onClick={()=>ClickedValue(index)} className={searchposter.searchposter__Img} src={element.share.image} />
                     <h6>{element.share.subject}</h6>
                     </div>)}
                 </div>}
                 <div className={searchposter.card__Container2}>
                     { searchedAlbum.map((element , index) =><div className={searchposter.card__Wrapper}>
-                    <img onClick={()=>ClickedValue(index)} className={searchposter.searchposter__Img} src={element?.share?.image} />
+                    <img alt='img' onClick={()=>ClickedValue(index)} className={searchposter.searchposter__Img} src={element?.share?.image} />
                     <h6>{element.share.subject}</h6>
                     </div>)}
                     </div>

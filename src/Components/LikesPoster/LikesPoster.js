@@ -4,14 +4,11 @@ import { useRecoilState } from 'recoil'
 import {FaPlay} from 'react-icons/fa'
 import {IoPauseSharp} from 'react-icons/io5'
 import {playPauseStatus , isLikeStatus} from '../../Recoil/Recoil'
-import {FiHeart} from 'react-icons/fi'
 import {FiMoreHorizontal} from 'react-icons/fi'
-import {CiClock2} from 'react-icons/ci'
 import MusicTrack from '../Track/MusicTrack'
 
 const LikesPoster =  () => {
     const [playPause , setPlayPause]  = useRecoilState(playPauseStatus)
-    const [like , setLike] = useRecoilState(isLikeStatus)
 
  
     const isPlayPause = () => {

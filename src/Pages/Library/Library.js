@@ -3,7 +3,6 @@ import SideNav from '../../Components/SideNav/SideNav'
 import Footer from '../../Components/Footer/Footer'
 import LibraryPoster from '../../Components/LibraryPoster/LibraryPoster'
 import Header from '../../Components/Header/Header'
-import { Link } from 'react-router-dom'
 
 const Library = () => {
 

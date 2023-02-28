@@ -61,7 +61,7 @@ const HomePoster = () => {
 
            <div className={homeposter.home__Content}>
           {topAlbums.map(element => <div className={homeposter.card__Content__Xl}>
-            <img  src={element?.share?.image|| "https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560"}  className={homeposter.content__Img} />
+            <img alt='img'  src={element?.share?.image|| "https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560"}  className={homeposter.content__Img} />
             <p className={homeposter.content__Subheading}>{element?.title || 'HELLOW WORLD'}</p>
             </div>)}
             </div>
@@ -70,7 +70,7 @@ const HomePoster = () => {
             <h1 className={homeposter.heading}>Made for you</h1>
             <div className={homeposter.home__Content1}>
            {forYou.map(element =>  <div className={homeposter.card__Content__Xxl}>
-            <img src={element?.share?.image|| "https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560"}  className={homeposter.content__Img1}/>
+            <img alt='img' src={element?.share?.image|| "https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560"}  className={homeposter.content__Img1}/>
             <div className={homeposter.subHeading__Wrapper}>
             <p  className={homeposter.content__Subheading1}> {element?.title}</p>
             <p  className={homeposter.content__Subheading2}>{element?.subtitle}</p>

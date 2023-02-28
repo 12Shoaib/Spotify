@@ -27,7 +27,7 @@ const Track = () => {
         <div >
             {data.map((element) => <div className={track.main__Component}>
             <p className={track.track__heading}>{element.count}</p> 
-            <img src={element.image} className={track.track__Img} />
+            <img alt='img' src={element.image} className={track.track__Img} />
             <span className={track.wrapper}>
             <p className={track.track__Song}>{element.song}</p>
             <p className={track.track__Song2}>{element.artist}</p></span>

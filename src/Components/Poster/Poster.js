@@ -28,7 +28,7 @@ const Poster = () => {
         <div className={poster.main__Component}>
 
             <div className={poster.upper__Section}> 
-                <img src='https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560' className={poster.poster__Img} />
+                <img alt='img' src='https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560' className={poster.poster__Img} />
                 <div className={poster.upper__SectionContent}>
                 <p className={poster.heading}>Playlist</p>
                 <p className={poster.heading2}>Lofi Vibe Hindi</p>
