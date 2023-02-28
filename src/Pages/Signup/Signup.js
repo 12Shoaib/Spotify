@@ -40,7 +40,7 @@ const Signup = () => {
             <h1 className={signup.heading}> <BsSpotify className={signup.icon__Spotify} /> Spotify </h1>
           <div className={signup.login__Container}>
          <h2 className={signup.sub__Heading3}>Sign up for free to start listening.</h2>
-          <button className={signup.google__Button}><img alt='img' src='https://p7.hiclipart.com/preview/344/344/59/google-logo-g-suite-google.jpg' className={signup.google__Icon}/> Sign up with google </button>
+          <button className={signup.google__Button}><img alt='google logo' src='https://p7.hiclipart.com/preview/344/344/59/google-logo-g-suite-google.jpg' className={signup.google__Icon}/> Sign up with google </button>
           <button className={signup.google__Button}>Sign up with phone </button>
          <div className={signup.middle__divsion}></div>
          <p className={signup.sub__Heading}>What's your email?</p>

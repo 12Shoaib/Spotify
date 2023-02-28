@@ -1,7 +1,7 @@
 import searchposter from './searchposter.module.css'
 import {FiSearch} from 'react-icons/fi'
 import { useEffect , useState } from 'react'
-import { useRecoilState } from 'recoil'
+import { useRecoilState , useSetRecoilState } from 'recoil'
 import {isMusic ,currentSong  } from '../../Recoil/Recoil'
 
 
@@ -11,7 +11,7 @@ const SearchPoster = () => {
     const [albums , setAlbums] = useState([])
     const [searchedAlbum , setSearchedAlbum] = useState([])
     const [loader , setLoader] = useState(false)
-    const [music , setMusic] = useRecoilState(isMusic)
+    const setMusic = useSetRecoilState(isMusic)
     const [selectedSong , setSelectedSong] = useRecoilState(currentSong)
     const [searchOff , setSearchOff] = useState(true)
     

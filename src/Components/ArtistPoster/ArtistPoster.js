@@ -14,7 +14,7 @@ const ArtistPoster = () => {
                 <h2 className={artistposter.heading}>Artist</h2>        
                 <div className={artistposter.card__Wrapper}>
                {data.map((element) => <div className={artistposter.card__Photo}>
-                    <img src={element.link} alt='artish image' className={artistposter.image}/> 
+                    <img src={element.link} alt='artist' className={artistposter.image}/> 
                     <p className={artistposter.sub__Heading}>{element.name}</p>
                     <p className={artistposter.sub__Heading2}>Artist</p>
                 </div>)}

@@ -55,7 +55,7 @@ const Footer = () => {
             <audio src={_currentSong} ref={audio}/>
 
             <div className={footer.left_Section}>   
-            <img src={currentAlbum?.share?.image} alt='image' className={footer.img__Style} />   
+            <img src={currentAlbum?.share?.image} alt='album' className={footer.img__Style} />   
             <p className={footer.song__Wrapper} >{currentAlbum?.title} <span className={footer.artist__Name}>{currentAlbum?.subtitle}</span></p>
            {like ? <FaHeart className={footer.icon__Color} onClick={isLike} /> : <FiHeart  onClick={isLike} /> }
             </div>

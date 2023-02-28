@@ -8,7 +8,7 @@ const DownloadPoster = () => {
     }
     return (
         <div className={downloadposter.main__Component}>
-            <img alt='image' src='https://open.spotifycdn.com/cdn/images/devices/mac.3fbeb8c6.png' className={downloadposter.poster__Image} />
+            <img alt='spotify' src='https://open.spotifycdn.com/cdn/images/devices/mac.3fbeb8c6.png' className={downloadposter.poster__Image} />
             <h1 className={downloadposter.heading}>Seamlessly listen to music you love. Download the Spotify app for your computer.</h1>
             <button onClick={openApp} className={downloadposter.button}>Get our free app</button>
         </div>

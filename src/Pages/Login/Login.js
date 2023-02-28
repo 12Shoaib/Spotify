@@ -7,14 +7,14 @@ import { useNavigate } from 'react-router-dom'
 import {auth , provider} from '../../FirebaseSetup/Firebase'
 import { signInWithEmailAndPassword , signInWithPopup } from 'firebase/auth'
 import {loginValue} from '../../Recoil/Recoil'
-import { useRecoilState } from 'recoil'
+import { useSetRecoilState } from 'recoil'
 
  
 const Login = () => {
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
     const [error , setError] = useState('')
-    const [isLoggedIn, setIsLoggedIn] = useRecoilState(loginValue)
+    const setIsLoggedIn = useSetRecoilState(loginValue)
     const navigate = useNavigate()
 
     const loginWithGoogle = () => {
@@ -54,7 +54,7 @@ const Login = () => {
          <h1 className={login.heading}> <BsSpotify className={login.icon__Spotify} /> Spotify </h1>
           <div className={login.login__Container}>
          <p className={login.sub__Heading3}>To continue, log in to Spotify.</p>
-          <button onClick={loginWithGoogle} className={login.google__Button}><img src='https://p7.hiclipart.com/preview/344/344/59/google-logo-g-suite-google.jpg' className={login.google__Icon}/> Continue with google </button>
+          <button onClick={loginWithGoogle} className={login.google__Button}><img alt='google logo' src='https://p7.hiclipart.com/preview/344/344/59/google-logo-g-suite-google.jpg' className={login.google__Icon}/> Continue with google </button>
           <button className={login.google__Button}>Continue with phone </button>
          <div className={login.middle__divsion}></div>
          <p className={login.sub__Heading}>Email address or username</p>

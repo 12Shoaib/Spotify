@@ -3,7 +3,7 @@ import {FaHeart} from 'react-icons/fa'
 import { useRecoilState } from 'recoil'
 import {FaPlay} from 'react-icons/fa'
 import {IoPauseSharp} from 'react-icons/io5'
-import {playPauseStatus , isLikeStatus} from '../../Recoil/Recoil'
+import {playPauseStatus } from '../../Recoil/Recoil'
 import {FiMoreHorizontal} from 'react-icons/fi'
 import MusicTrack from '../Track/MusicTrack'
 
