@@ -6,23 +6,25 @@ import {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import {auth , provider} from '../../FirebaseSetup/Firebase'
 import { signInWithEmailAndPassword , signInWithPopup } from 'firebase/auth'
-import {loginValue} from '../../Recoil/Recoil'
-import { useSetRecoilState } from 'recoil'
+import {loginValue } from '../../Recoil/Recoil'
+import {useSetRecoilState} from 'recoil'
 
- 
 const Login = () => {
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
     const [error , setError] = useState('')
     const setIsLoggedIn = useSetRecoilState(loginValue)
     const navigate = useNavigate()
+    let details = []
 
-    const loginWithGoogle = () => {
+     const loginWithGoogle = () => {
         signInWithPopup(auth,provider)
         .then((user) => {
             console.log(user)
             navigate('/')
             setIsLoggedIn(true)
+            details.push(user)
+            console.log(details)
         })
         .catch((error) => {
             console.log(error)
@@ -31,9 +33,9 @@ const Login = () => {
 
     const handleLogIn = () => {
         signInWithEmailAndPassword(auth , email , password)
-        .then((userCredential) => {
-            console.log(userCredential)
-            navigate('/')            
+        .then((authUserCredential) => {
+            console.log(authUserCredential)
+            navigate('/')    
         })
         .catch((error) => {
             console.log(error)
@@ -70,5 +72,4 @@ const Login = () => {
         </div>
     )
 }
-
-export default Login
+export default Login 

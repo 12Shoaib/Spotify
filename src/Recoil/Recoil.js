@@ -23,3 +23,4 @@ export const loginValue = atom({
     key:'loggedin key',
     default:false
 })
+

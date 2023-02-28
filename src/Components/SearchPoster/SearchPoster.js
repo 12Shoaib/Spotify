@@ -26,7 +26,7 @@ const SearchPoster = () => {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'f4a767572emsh0d0abf26f5a0955p10e59djsn7f8474f3f53d',
+                'X-RapidAPI-Key': '3c726cd1acmshcad790de7101870p1ec711jsn1dd6f776dc20',
                 'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
             }
         };
@@ -53,7 +53,7 @@ const SearchPoster = () => {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'f4a767572emsh0d0abf26f5a0955p10e59djsn7f8474f3f53d',
+                'X-RapidAPI-Key': '3c726cd1acmshcad790de7101870p1ec711jsn1dd6f776dc20',
                 'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
             }
         };
