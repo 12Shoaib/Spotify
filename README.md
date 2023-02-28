@@ -1,5 +1,5 @@
 <h1>The Spotify Clone By Developer Mohd Shoaib</h1>
-<a href="https://spotifyclone-byshoaib.netlify.app/ > Live Spotify Website </a>
+<p> Live website : https://spotifyclone-byshoaib.netlify.app/ </p>
 <img width="960" alt="2023-02-28 (2)" src="https://user-images.githubusercontent.com/93069814/221688673-38c1d671-874b-4859-8074-6ad66b53a253.png">
 
 <h6> Details of the project </h6>
