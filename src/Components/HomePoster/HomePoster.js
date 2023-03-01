@@ -11,7 +11,7 @@ const HomePoster = () => {
     const [topAlbums , setTopAlbums] = useState([])
     const [forYou , setForYou] = useState([])
     const setMusic = useSetRecoilState(isMusic)
-    const [selectedSong , setSelectedSong] = useRecoilState(currentSong)
+    const setSelectedSong = useSetRecoilState(currentSong)
 
 
     

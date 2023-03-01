@@ -23,9 +23,9 @@ const App = () => {
     if(!logInStatus){
       navigate('/signin')
     }
-  } , [logInStatus])
+  } , [navigate])
 
-
+console.log(navigate)
   return(
     <div>
       <Routes>

@@ -19,14 +19,13 @@ import { useRef , useEffect , useState } from 'react'
 
 
 const Footer = () => {
-
+    const [mute , setMute ] = useState(false)
     const [volume , setVolume] = useState(55)
     const [like , setLike] = useRecoilState(isLikeStatus)
     const [playPause , setPlayPause]  = useRecoilState(playPauseStatus)
     const _currentSong = useRecoilValue(isMusic)
     const currentAlbum = useRecoilValue(currentSong) 
     const audio = useRef()
-    const selectedAlbumSong =   JSON.parse(localStorage.getItem('data'))
 
     console.log(currentAlbum)
     
@@ -36,6 +35,14 @@ const Footer = () => {
         }
     } , [audio , volume])
 
+    const muteVolume = () => {
+        setMute(!mute)
+        setVolume(55)  
+    }
+    const resumeVolume = () => {
+        setVolume(0)  
+        setMute(!mute)
+    }
     const handleVolume =(e) => {
         setVolume(e.target.value)
     }
@@ -83,10 +90,10 @@ const Footer = () => {
                 <TbMicrophone2 className={footer.rightSection__Icons} />
                 <HiOutlineQueueList className={footer.rightSection__Icons} />
                 <MdOutlineSpeaker className={footer.rightSection__Icons} />
-               {volume == 0 ? 
-               <VscMute className={footer.rightSection__Icons} />
+               {mute  ? 
+               <VscMute onClick={muteVolume} className={footer.rightSection__Icons} />
                :
-               <HiOutlineSpeakerWave className={footer.rightSection__Icons}/> }
+               <HiOutlineSpeakerWave onClick={resumeVolume} className={footer.rightSection__Icons}/> }
                 <input  type='range' min={0} max={100} value={volume} onChange={handleVolume} className={footer.rightSection__Volume}/>
 
             </div>
