@@ -12,15 +12,25 @@ import Login from './Pages/Login/Login'
 import Signup from './Pages/Signup/Signup'
 import {loginValue} from './Recoil/Recoil'
 import { useRecoilValue } from 'recoil'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const App = () => {
       const logInStatus = useRecoilValue(loginValue)
+      const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!logInStatus){
+      navigate('/signin')
+    }
+  } , [logInStatus])
+
 
   return(
     <div>
       <Routes>
         <Route path='/' element={<MusicPlayer />}   />
-     {logInStatus && <>  <Route path='/search' element={<Search />}   />
+        <Route path='/search' element={<Search />}   />
         <Route path='/library' element={<Library />}   />
         <Route path='/playlist' element={<Playlist />}   />
         <Route path='/podcast' element={<Podcast />}   />
@@ -28,8 +38,8 @@ const App = () => {
         <Route path='/album' element={<Album />}   />
         <Route path='/download' element={<Download />}   />
         <Route path='/likes' element={<Likes />}   />
+        <Route path='/signup' element={<Signup />}   />
         <Route path='/signin' element={<Login />}   />
-        <Route path='/signup' element={<Signup />}   /> </>}
       </Routes>
     </div>
   )

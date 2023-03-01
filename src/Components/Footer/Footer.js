@@ -17,6 +17,7 @@ import {playPauseStatus , isLikeStatus , isMusic , currentSong } from '../../Rec
 import { useRef , useEffect , useState } from 'react'
 
 
+
 const Footer = () => {
 
     const [volume , setVolume] = useState(55)

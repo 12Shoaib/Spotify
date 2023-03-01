@@ -8,11 +8,17 @@ import {auth , provider} from '../../FirebaseSetup/Firebase'
 import { signInWithEmailAndPassword , signInWithPopup } from 'firebase/auth'
 import {loginValue } from '../../Recoil/Recoil'
 import {useSetRecoilState} from 'recoil'
+import {isValidemail,isValidPassword} from '../../Helper/ClientSideValidations'
+import {BiErrorAlt} from 'react-icons/bi'
 
 const Login = () => {
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
     const [error , setError] = useState('')
+    const [emailError  , setEmailError] = useState('')
+    const [passwordError  , setPasswordError] = useState('')
+    const [showEmailError, setShowEmailError] = useState(false)
+    const [showPasswordError , setShowPasswordError] = useState(false)
     const setIsLoggedIn = useSetRecoilState(loginValue)
     const navigate = useNavigate()
     let details = []
@@ -47,9 +53,20 @@ const Login = () => {
     }
     const emailCapture = (e) => {
         setEmail(e.target.value)
+        const validated = isValidemail(e.target.value)
+        setEmailError(validated)
+
     }
     const passwordCapture = (e) => {
         setPassword(e.target.value)
+        const validated = isValidPassword(e.target.value)
+        setPasswordError(validated)
+    }
+    function displayingEmailError() {
+        setShowEmailError(true)
+    }
+    function displayingPasswordError(){     
+        setShowPasswordError(true)
     }
     return(
         <div className={login.main__Component}>
@@ -60,9 +77,11 @@ const Login = () => {
           <button className={login.google__Button}>Continue with phone </button>
          <div className={login.middle__divsion}></div>
          <p className={login.sub__Heading}>Email address or username</p>
-         <Input onChange={emailCapture} type='email' placeholder='Email adress or user name' />
+         <Input onBlur={displayingEmailError} onChange={emailCapture} type='email' placeholder='Email adress or user name' />
+         {showEmailError && <> {!emailError && <span className={login.errorMsg}><BiErrorAlt className={login.errorIcon}/> Invalid email adress,Please enter details correctly </span>}</>}
          <p className={login.sub__Heading}>Password</p>
-         <Input onChange={passwordCapture} type='password' placeholder='Password' />
+         <Input onBlur={displayingPasswordError} onChange={passwordCapture} type='password' placeholder='Password' />
+         {showPasswordError && <>{!passwordError && <span className={login.errorMsg}><BiErrorAlt className={login.errorIcon}/> Invalid password ,Please enter details correctly </span>}</>}
          <p className={login.sub__Heading2}>Forgot your password?</p>
          <h4 className={login.login__Error}>{error}</h4>
          <Button onClick={handleLogIn} name='Log-in' />

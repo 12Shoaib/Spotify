@@ -112,3 +112,17 @@
 .login__Error{
     color: red;
 }
+.errorMsg{
+    color: red;
+    font-size: 0.8rem;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.errorIcon{
+    color: red;
+    padding: 0px;
+    margin: 0px;
+}
