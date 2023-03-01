@@ -27,7 +27,6 @@ const Footer = () => {
     const currentAlbum = useRecoilValue(currentSong) 
     const audio = useRef()
 
-    console.log(currentAlbum)
     
     useEffect(() => {
         if(audio){

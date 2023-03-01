@@ -23,7 +23,7 @@ export const isValidPassword =(passwordCapture) => {
         }
 }
 export const isValidUserName = (userNameCapture) => {
-    const nameRegixExpression =/^[a-z0-9_\.]+$/ 
+    const nameRegixExpression = /^[a-zA-Z0-9]+([_\s/\-]?[a-zA-Z0-9])*$/
     if(nameRegixExpression.test(userNameCapture)){
      return true
     }else{

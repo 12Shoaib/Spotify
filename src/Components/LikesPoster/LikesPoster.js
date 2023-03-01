@@ -1,19 +1,24 @@
 import likesposter from './likesposter.module.css'
 import {FaHeart} from 'react-icons/fa'
-import { useRecoilState } from 'recoil'
+import { useRecoilState , useSetRecoilState } from 'recoil'
 import {FaPlay} from 'react-icons/fa'
 import {IoPauseSharp} from 'react-icons/io5'
-import {playPauseStatus } from '../../Recoil/Recoil'
+import { playPauseStatus, likedSongsList  } from '../../Recoil/Recoil'
 import {FiMoreHorizontal} from 'react-icons/fi'
 import MusicTrack from '../Track/MusicTrack'
 
+
 const LikesPoster =  () => {
     const [playPause , setPlayPause]  = useRecoilState(playPauseStatus)
+    const setLikedSong = useSetRecoilState(likedSongsList)
 
  
     const isPlayPause = () => {
-        setPlayPause(!playPause)
+       setPlayPause(!playPause)
     }
+    console.log(setLikedSong)
+
+
     return(
         <div className={likesposter.main__Component}>
 

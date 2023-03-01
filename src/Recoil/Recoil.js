@@ -24,3 +24,7 @@ export const loginValue = atom({
     default:false
 })
 
+export const likedSongsList = atom({
+    key:'likedSong',
+    default:[]
+})

@@ -1,7 +1,7 @@
 import homeposter from './homeposter.module.css';
 import { useState , useEffect } from 'react';
 import {isMusic , currentSong} from '../../Recoil/Recoil'
-import { useRecoilState , useSetRecoilState } from 'recoil'
+import {  useSetRecoilState } from 'recoil'
 
 
 

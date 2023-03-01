@@ -23,7 +23,7 @@ const App = () => {
     if(!logInStatus){
       navigate('/signin')
     }
-  } , [navigate])
+  } , [navigate , logInStatus])
 
 console.log(navigate)
   return(
