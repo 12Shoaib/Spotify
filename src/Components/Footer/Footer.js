@@ -1,6 +1,6 @@
-import footer from './footer.module.css';
+import footer from './footer.module.css'
 import {VscMute} from 'react-icons/vsc'
-import {useRecoilState, useRecoilValue} from 'recoil'
+import {useRecoilState, useRecoilValue, useSetRecoilState} from 'recoil'
 import {FaHeart} from 'react-icons/fa'
 import {FiHeart} from 'react-icons/fi'
 import {TiArrowShuffle} from 'react-icons/ti'
@@ -13,26 +13,47 @@ import {TbMicrophone2} from 'react-icons/tb'
 import {HiOutlineSpeakerWave} from 'react-icons/hi2'
 import {HiOutlineQueueList} from 'react-icons/hi2'
 import {MdOutlineSpeaker} from 'react-icons/md'
-import {playPauseStatus , isLikeStatus , isMusic , currentSong } from '../../Recoil/Recoil'
+import {playPauseStatus ,topAlbumsAtom, isLikeStatus , isMusic , currentSong } from '../../Recoil/Recoil'
 import { useRef , useEffect , useState } from 'react'
 
-
+ 
 
 const Footer = () => {
+    const [changeSong , setChangeSong] = useState(0)
     const [mute , setMute ] = useState(false)
     const [volume , setVolume] = useState(55)
     const [like , setLike] = useRecoilState(isLikeStatus)
     const [playPause , setPlayPause]  = useRecoilState(playPauseStatus)
-    const _currentSong = useRecoilValue(isMusic)
-    const currentAlbum = useRecoilValue(currentSong) 
+    const [_currentSong , set_CurrentSong ]= useRecoilState(isMusic)
+    const [currentAlbum , setCurrentAlbum] = useRecoilState(currentSong)
+    const topAlbums = useRecoilValue(topAlbumsAtom) 
     const audio = useRef()
 
-    
+
+    useEffect(() => {
+
+    } , [changeSong])
     useEffect(() => {
         if(audio){
             audio.current.volume = volume/100
         }
     } , [audio , volume])
+
+    const previousSong = () => {
+        setChangeSong(changeSong -1)
+        if(topAlbums.length>0){
+        set_CurrentSong(topAlbums[changeSong].hub.actions[1].uri)
+        setCurrentAlbum(topAlbums[changeSong])
+        }
+    }
+
+    const nextSong = () => {
+        setChangeSong(changeSong + 1)
+        if(topAlbums.length >0){
+        set_CurrentSong(topAlbums[changeSong].hub.actions[1].uri)
+        setCurrentAlbum(topAlbums[changeSong])
+    }
+    }
 
     const muteVolume = () => {
         setMute(!mute)
@@ -62,7 +83,7 @@ const Footer = () => {
 
             <div className={footer.footer__Wrapper}>
 
-            <audio src={_currentSong} ref={audio}/>
+            <audio src={_currentSong} ref={audio} autoPlay/>
 
             <div className={footer.left_Section}>   
             <img src={currentAlbum?.share?.image} alt='' className={footer.img__Style} />   
@@ -72,7 +93,7 @@ const Footer = () => {
 
             <div className={footer.middle__Part}>
             <TiArrowShuffle className={footer.icons} />
-            <AiFillStepBackward className={footer.icons} />
+            <AiFillStepBackward onClick={previousSong} className={footer.icons} />
 
            {playPause ? <p  onClick={isPlayPause} className={footer.play__Icon}>
                <IoPauseSharp onClick={pauseSong} className={footer.icons}/>
@@ -82,7 +103,7 @@ const Footer = () => {
                 <FaPlay onClick={playSong} className={footer.playIcon}/>
             </p>}
 
-            <AiFillStepForward className={footer.icons} />
+            <AiFillStepForward onClick={nextSong} className={footer.icons} />
             <FiRepeat className={footer.icon__repeat} />
             </div>
             <div className={footer.right__Section}>

@@ -10,25 +10,15 @@ import Download from './Pages/Download/Download'
 import Likes from './Pages/Likes/Likes'
 import Login from './Pages/Login/Login'
 import Signup from './Pages/Signup/Signup'
-import {loginValue} from './Recoil/Recoil'
-import { useRecoilValue } from 'recoil'
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import SecureRouting from './Components/SecureRouting/SecureRouting'
+
 
 const App = () => {
-      const logInStatus = useRecoilValue(loginValue)
-      const navigate = useNavigate()
-
-  useEffect(() => {
-    if(!logInStatus){
-      navigate('/signin')
-    }
-  } , [navigate , logInStatus])
-
-console.log(navigate)
+      
   return(
     <div>
       <Routes>
+        <Route element={<SecureRouting />} >
         <Route path='/' element={<MusicPlayer />}   />
         <Route path='/search' element={<Search />}   />
         <Route path='/library' element={<Library />}   />
@@ -38,6 +28,7 @@ console.log(navigate)
         <Route path='/album' element={<Album />}   />
         <Route path='/download' element={<Download />}   />
         <Route path='/likes' element={<Likes />}   />
+        </Route>
         <Route path='/signup' element={<Signup />}   />
         <Route path='/signin' element={<Login />}   />
       </Routes>

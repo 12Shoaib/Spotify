@@ -28,3 +28,8 @@ export const likedSongsList = atom({
     key:'likedSong',
     default:[]
 })
+
+export const topAlbumsAtom = atom({
+    key:'topAlbums',
+    default:[]
+})

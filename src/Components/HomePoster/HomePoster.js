@@ -1,14 +1,14 @@
 import homeposter from './homeposter.module.css';
 import { useState , useEffect } from 'react';
-import {isMusic , currentSong} from '../../Recoil/Recoil'
-import {  useSetRecoilState } from 'recoil'
+import {isMusic , currentSong , topAlbumsAtom} from '../../Recoil/Recoil'
+import {  useRecoilState, useSetRecoilState } from 'recoil'
 
 
 
 const data = [1,2,3,4,5,6]
 const HomePoster = () => {
     const [loader , setLoader] = useState(false)
-    const [topAlbums , setTopAlbums] = useState([])
+    const [topAlbums , setTopAlbums] = useRecoilState(topAlbumsAtom)
     const [forYou , setForYou] = useState([])
     const setMusic = useSetRecoilState(isMusic)
     const setSelectedSong = useSetRecoilState(currentSong)
@@ -50,7 +50,6 @@ const HomePoster = () => {
       fetchingForYou()
     },[])
     function topAlbumClickedValue (index) {
-      console.log(topAlbums[index] , 'newShoain')
       setMusic(topAlbums[index].hub.actions[1].uri)
       setSelectedSong(topAlbums[index])
   }
