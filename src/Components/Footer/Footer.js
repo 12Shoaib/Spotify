@@ -1,6 +1,6 @@
 import footer from './footer.module.css'
 import {VscMute} from 'react-icons/vsc'
-import {useRecoilState, useRecoilValue, useSetRecoilState} from 'recoil'
+import {useRecoilState, useRecoilValue} from 'recoil'
 import {FaHeart} from 'react-icons/fa'
 import {FiHeart} from 'react-icons/fi'
 import {TiArrowShuffle} from 'react-icons/ti'
@@ -14,11 +14,12 @@ import {HiOutlineSpeakerWave} from 'react-icons/hi2'
 import {HiOutlineQueueList} from 'react-icons/hi2'
 import {MdOutlineSpeaker} from 'react-icons/md'
 import {playPauseStatus ,topAlbumsAtom, isLikeStatus , isMusic , currentSong } from '../../Recoil/Recoil'
-import { useRef , useEffect , useState } from 'react'
+import { useRef, useEffect , useState } from 'react'
 
  
 
 const Footer = () => {
+    const audio = useRef()
     const [changeSong , setChangeSong] = useState(0)
     const [mute , setMute ] = useState(false)
     const [volume , setVolume] = useState(55)
@@ -27,12 +28,7 @@ const Footer = () => {
     const [_currentSong , set_CurrentSong ]= useRecoilState(isMusic)
     const [currentAlbum , setCurrentAlbum] = useRecoilState(currentSong)
     const topAlbums = useRecoilValue(topAlbumsAtom) 
-    const audio = useRef()
-
-
-    useEffect(() => {
-
-    } , [changeSong])
+    
     useEffect(() => {
         if(audio){
             audio.current.volume = volume/100
@@ -83,7 +79,7 @@ const Footer = () => {
 
             <div className={footer.footer__Wrapper}>
 
-            <audio src={_currentSong} ref={audio} autoPlay/>
+            <audio src={_currentSong} ref={audio} />
 
             <div className={footer.left_Section}>   
             <img src={currentAlbum?.share?.image} alt='' className={footer.img__Style} />   

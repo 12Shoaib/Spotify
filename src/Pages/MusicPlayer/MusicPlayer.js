@@ -7,7 +7,7 @@ import Login from '../Login/Login'
 import {loginValue} from '../../Recoil/Recoil'
 import {useRecoilValue} from 'recoil'
 
-const MusicPlayer  = () => {        
+const MusicPlayer  = () => {       
     const isLogIn = useRecoilValue(loginValue)
     return (
         <div className={musicplayer.musicplayer__Wrapper}>
@@ -16,8 +16,8 @@ const MusicPlayer  = () => {
            <div className={musicplayer.main__Component}>
                 <Header />
                 <SideNav />
-                <HomePoster />
-                <Footer />
+                <HomePoster   />
+                <Footer  />
         </div> : <Login /> }
         </div>
     )
