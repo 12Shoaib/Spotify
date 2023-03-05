@@ -15,10 +15,10 @@ const HomePoster = () => {
 
     useEffect(() => {
 
-      fetchingTopAlbums()
-      fetchingForYou()
+      fetchingTopAlbums();
+      fetchingForYou();
 
-    }, [])git 
+    }, [])
     
       const options = {
             method: 'GET',
