@@ -16,9 +16,10 @@ const HomePoster = () => {
     useEffect(() => {
 
       fetchingTopAlbums();
-      fetchingTopAlbums();
+      fetchingForYou();
+     
 
-    }, [fetchingTopAlbums ,fetchingTopAlbums ])
+    }, [fetchingForYou ,fetchingTopAlbums ])
     
       const options = {
             method: 'GET',
