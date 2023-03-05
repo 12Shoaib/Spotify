@@ -13,9 +13,13 @@ const HomePoster = () => {
     const setMusic = useSetRecoilState(isMusic)
     const setSelectedSong = useSetRecoilState(currentSong)
 
-
-    
     useEffect(() => {
+
+      fetchingTopAlbums()
+      fetchingForYou()
+
+    }, [])git 
+    
       const options = {
             method: 'GET',
             headers: {
@@ -30,16 +34,7 @@ const HomePoster = () => {
         setTopAlbums(data.tracks)
         setLoader(false)
       }  
-      fetchingTopAlbums()
-    },[])
-     useEffect(() => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '3c726cd1acmshcad790de7101870p1ec711jsn1dd6f776dc20',
-                'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
-            }
-        };
+  
       const fetchingForYou = async () => {
         setLoader(true)
         const response = await fetch('https://shazam.p.rapidapi.com/charts/track?locale=en-US&pageSize=30&startFrom=70', options)
@@ -47,8 +42,7 @@ const HomePoster = () => {
         setForYou(data.tracks)
         setLoader(false)
       }  
-      fetchingForYou()
-    },[])
+     
     function topAlbumClickedValue (index) {
       setMusic(topAlbums[index].hub.actions[1].uri)
       setSelectedSong(topAlbums[index])
