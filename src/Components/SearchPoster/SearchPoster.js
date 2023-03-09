@@ -68,7 +68,7 @@ const SearchPoster = () => {
         <div className={searchposter.main__component}>
             <div className={searchposter.searchposter__searchWrapper}>
              <FiSearch onClick={searchQuery} className={searchposter.search__Icon} />
-              <input onChange={(e) => setSearch(e.target.value)} placeholder='What do you want to listen to?' className={searchposter.search__Bar}  />
+              <input onChange={(e) => setSearch(e.target.value)} placeholder='What do you want to listen to?' className={searchposter.search__Bar} onBlur={searchQuery} />
               
             </div>
             

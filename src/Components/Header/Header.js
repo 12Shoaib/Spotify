@@ -14,10 +14,13 @@ const Header = () => {
     const logOut = () => {
         isLogOut(false)
     }
+    const handleExplore = () => {
+        window.open('https://www.spotify.com/in-en/premium/?utm_source=app&utm_medium=desktop&utm_campaign=upgrade&ref=web_loggedin_upgrade_button')
+    }
 
     return (
         <div className={header.main__Component}>
-            <p className={header.sub__Heading}>Explore Premium</p>
+            <p onClick={handleExplore} className={header.sub__Heading}>Explore Premium</p>
             <p onClick={handleShow} className={header.sub__Heading2} ><span className={header.profilIcon__Wrapper}><SlUser /></span>
              user_123 <AiOutlineCaretDown /></p>
            {show &&  <div onClick={logOut} className={header.show_Component}>
