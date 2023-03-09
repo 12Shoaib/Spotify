@@ -17,7 +17,7 @@ const HomePoster = () => {
       const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '3c726cd1acmshcad790de7101870p1ec711jsn1dd6f776dc20',
+                'X-RapidAPI-Key': 'c837587d36mshc1f43974f0a683ap120b95jsn9db00053f0c3',
                 'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
             }
         };
@@ -27,14 +27,15 @@ const HomePoster = () => {
         const data = await response.json()
         setTopAlbums(data.tracks)
         setLoader(false)
+        
       }  
       fetchingTopAlbums()
-    },[topAlbums])
+    },[setTopAlbums])
      useEffect(() => {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '3c726cd1acmshcad790de7101870p1ec711jsn1dd6f776dc20',
+                'X-RapidAPI-Key': 'c837587d36mshc1f43974f0a683ap120b95jsn9db00053f0c3',
                 'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
             }
         };
@@ -46,15 +47,17 @@ const HomePoster = () => {
         setLoader(false)
       }  
       fetchingForYou()
-    },[forYou])
+    },[setForYou])
     function topAlbumClickedValue (index) {
       setMusic(topAlbums[index].hub.actions[1].uri)
       setSelectedSong(topAlbums[index])
+
   }
     function forYouAlbumClicked (index) {
       console.log(forYou[index] , 'shoaib')
       setMusic(forYou[index].hub.actions[1].uri)
       setSelectedSong(forYou[index])
+
     }
     return(
         <div className={homeposter.main__Component}>
@@ -75,7 +78,7 @@ const HomePoster = () => {
             </div>  }
 
            <div className={homeposter.home__Content}>
-          {topAlbums.map((element , index) => <div onClick={() => topAlbumClickedValue(index)}  className={homeposter.card__Content__Xl}>
+          {topAlbums?.map((element , index) => <div onClick={() => topAlbumClickedValue(index)}  className={homeposter.card__Content__Xl}>
             <img alt='img' src={element?.share?.image|| "https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560"}  className={homeposter.content__Img} />
             <p className={homeposter.content__Subheading}>{element?.title || 'noTittle'}</p>
             </div>)}
@@ -84,7 +87,7 @@ const HomePoster = () => {
             <div className={homeposter.bottom__Section}>
             <h1 className={homeposter.heading}>Made for you</h1>
             <div className={homeposter.home__Content1}>
-           {forYou.map((element , index) =>  <div className={homeposter.card__Content__Xxl}>
+           {forYou?.map((element , index) =>  <div className={homeposter.card__Content__Xxl}>
             <img onClick={() => forYouAlbumClicked(index)} alt='img' src={element?.share?.image|| "https://i.scdn.co/image/ab67706f0000000285e854e18614a1c09ad07560"}  className={homeposter.content__Img1}/>
             <div className={homeposter.subHeading__Wrapper}>
             <p  className={homeposter.content__Subheading1}> {element?.title}</p>

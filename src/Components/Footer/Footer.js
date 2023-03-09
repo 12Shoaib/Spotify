@@ -28,7 +28,8 @@ const Footer = () => {
     const [_currentSong , set_CurrentSong ]= useRecoilState(isMusic)
     const [currentAlbum , setCurrentAlbum] = useRecoilState(currentSong)
     const topAlbums = useRecoilValue(topAlbumsAtom) 
-    
+ 
+
     useEffect(() => {
         if(audio){
             audio.current.volume = volume/100
